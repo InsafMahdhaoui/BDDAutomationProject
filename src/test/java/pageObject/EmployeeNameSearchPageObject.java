@@ -49,7 +49,7 @@ public class EmployeeNameSearchPageObject {
 	public void listOptionClick() {
 		//Select select = new Select(listBoxContainerElement);
 		//String option = listBoxOptionTextElement.getText();
-		//	select.deselectByValue(option);
+		//select.deselectByValue(option);
 		listBoxContainerElement.click();
 	}
 
