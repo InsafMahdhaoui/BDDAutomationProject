@@ -13,9 +13,10 @@ Feature: Search
   @searchByEmployeeName
   Scenario Outline: Rechercher un utilisateur avec employeeName
     When je saisi le employeeName "<name>"
+    And je clique sur l element dans la list
     And je clique sur le searchButton
-    Then je verifi les posts des users affichees "<name>"
+    Then je verifi les empolyeeNames affichees "<name>"
 
     Examples: 
-      | name          |
-      | MOHAMED AMINE |
+      | name       |
+      | Buck Koepp |

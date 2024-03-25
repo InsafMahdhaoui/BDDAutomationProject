@@ -38,6 +38,14 @@ public class EmployeeNameSearchStepDef {
 		waitMethods.explicitWaitUntilPresenceOfElementLocatedXpath(driver, selecteur, 5);
 		employeeNameSearchPageObject.saisiEmployeeName(employeeName);
 	}
+	
+	@When("je clique sur l element dans la list")
+	public void je_clique_sur_l_element_dans_la_list() throws InterruptedException {
+		String selecteur = employeeNameSearchPageObject.LISTBOX_OPTION_XPATH;
+		waitMethods.explicitWaitUntilButtonIsClickableXpath(driver, selecteur, 7);
+		Thread.sleep(5000);
+		employeeNameSearchPageObject.listOptionClick();
+	}
 
 	@When("je clique sur le searchButton")
 	public void je_clique_sur_le_search_button() throws InterruptedException {
@@ -45,14 +53,12 @@ public class EmployeeNameSearchStepDef {
 		waitMethods.explicitWaitUntilButtonIsClickableXpath(driver, selecteur, 7);
 		Thread.sleep(5000);
 		employeeNameSearchPageObject.searchSubmit();
-		Thread.sleep(5000);
-
-
+		//Thread.sleep(5000);
 	}
 
-	@Then("je verifi les posts des users affichees {string}")
-	public void je_verifi_les_posts_des_users_affichees(String employeeName) throws InterruptedException {
-		
+	@Then("je verifi les empolyeeNames affichees {string}")
+	public void je_verifi_les_empolyee_names_affichees(String employeeName) throws InterruptedException {
+	
 	String selecteur = employeeNameSearchPageObject.EMPLOYEE_NAME_TABLE_XPATH;
 	waitMethods.explicitWaitUntilPresenceOfElementLocatedXpath(driver, selecteur, 5);
 	Thread.sleep(5000);

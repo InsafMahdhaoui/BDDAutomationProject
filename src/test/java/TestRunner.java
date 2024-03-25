@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 																							// dans le dossier target et
 																							// du nom
 																							// "cucumber-report.html"
-		tags = ("@logout"), // contient l'annotation du scenario qu'on veut l'executer
+		tags = ("@searchByEmployeeName"), // contient l'annotation du scenario qu'on veut l'executer
 		snippets = SnippetType.CAMELCASE, // forcer le generation des noms des methodes en stepDefinition en des noms
 											// attachees et des 1 ere lettes majuscules
 		monochrome = true // responsable a generer un console lisible
